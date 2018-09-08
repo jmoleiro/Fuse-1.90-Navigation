@@ -1,0 +1,15 @@
+<StackPanel Padding="30" ux:Class="content" Dock="Fill">
+    <Router ux:Dependency="router" />
+    <JavaScript File="ext_content.js" />
+    <JavaScript>
+        this.Parameter.onValueChanged(module, function(param) {
+            console.log("ovc: "+JSON.stringify(param));
+        });
+    </JavaScript>
+    <Text Value="{received}" FontSize="44" Margin="0, 20, 0, 30" />
+    <uxButton Label="Go Home">
+        <Clicked>
+            <Callback Handler="{goHome}" />
+        </Clicked>
+    </uxButton>
+</StackPanel>

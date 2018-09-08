@@ -1,0 +1,4 @@
+<Panel Padding="30" ux:Class="uxButton" Margin="0,0,0,20" Background="#c00880">
+    <string ux:Property="Label" />
+    <Text Value="{Property Label}" Color="#fff" TextAlignment="Center" FontSize="30" />
+</Panel>

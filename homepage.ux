@@ -1,0 +1,27 @@
+<StackPanel Padding="30" ux:Class="homepage">
+    <Router ux:Dependency="router" />
+    <uxButton Label="Call Content AA">
+        <Clicked>
+            <RaiseUserEvent EventName="routeContent">
+                <UserEventArg Name="id" StringValue="0001" />
+                <UserEventArg Name="title" StringValue="Content AA" />
+            </RaiseUserEvent>
+        </Clicked>
+    </uxButton>
+    <uxButton Label="Call Content BB">
+        <Clicked>
+            <RaiseUserEvent EventName="routeContent">
+                <UserEventArg Name="id" StringValue="0002" />
+                <UserEventArg Name="title" StringValue="Content BB" />
+            </RaiseUserEvent>
+        </Clicked>
+    </uxButton>
+    <uxButton Label="Call Content CC">
+        <Clicked>
+            <RaiseUserEvent EventName="routeContent">
+                <UserEventArg Name="id" StringValue="0003" />
+                <UserEventArg Name="title" StringValue="Content CC" />
+            </RaiseUserEvent>
+        </Clicked>
+    </uxButton>
+</StackPanel>  

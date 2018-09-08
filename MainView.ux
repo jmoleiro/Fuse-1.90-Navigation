@@ -1,0 +1,17 @@
+<App Background="#263238">
+<!-- Global -->
+<UserEvent Name="routeContent" />
+<OnUserEvent EventName="routeContent" Handler="{routeContent}" />
+<JavaScript File="external.js" />
+<Router ux:Name="router" />
+<Navigator Dock="Fill" DefaultPath="main">
+    <Page ux:Template="main">
+    <ScrollView>
+        <homepage router="router" />
+    </ScrollView>
+    </Page>
+    <Page ux:Template="content">
+        <content router="router" Background="#4266AB" />    
+    </Page>
+</Navigator>
+</App>
