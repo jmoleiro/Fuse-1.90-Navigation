@@ -9,8 +9,9 @@ var routeContent = function(args) {
     var obj =  { id: args.id, title: args.title };
     console.log(JSON.stringify(obj));
     //router.push("content", { id: args.id, title: args.title });
-    router.push("content", obj);
+    router.push(args.target, obj);
 }
+
 
 module.exports = {
     goHome: goHome,

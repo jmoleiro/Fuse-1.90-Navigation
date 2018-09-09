@@ -4,8 +4,9 @@
     "Fuse",
     "FuseJS"
   ],
-  "Includes": [
-    "*"
+"Includes": [
+    "**.ux:UXFile",
+    "*.js:Bundle",
   ]
 }
 

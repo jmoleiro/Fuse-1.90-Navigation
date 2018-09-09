@@ -1,10 +1,10 @@
 <StackPanel Padding="30" ux:Class="homepage">
-    <Router ux:Dependency="router" />
     <uxButton Label="Call Content AA">
         <Clicked>
             <RaiseUserEvent EventName="routeContent">
                 <UserEventArg Name="id" StringValue="0001" />
-                <UserEventArg Name="title" StringValue="Content AA" />
+                <UserEventArg Name="title" StringValue="Content Page 1 AA" />
+                <UserEventArg Name="target" StringValue="contentPage" />
             </RaiseUserEvent>
         </Clicked>
     </uxButton>
@@ -12,15 +12,26 @@
         <Clicked>
             <RaiseUserEvent EventName="routeContent">
                 <UserEventArg Name="id" StringValue="0002" />
-                <UserEventArg Name="title" StringValue="Content BB" />
+                <UserEventArg Name="title" StringValue="Content Page 1 BB" />
+                <UserEventArg Name="target" StringValue="contentPage" />
             </RaiseUserEvent>
         </Clicked>
     </uxButton>
-    <uxButton Label="Call Content CC">
+    <uxButton Label="Call Content AA">
         <Clicked>
             <RaiseUserEvent EventName="routeContent">
-                <UserEventArg Name="id" StringValue="0003" />
-                <UserEventArg Name="title" StringValue="Content CC" />
+                <UserEventArg Name="id" StringValue="0001" />
+                <UserEventArg Name="title" StringValue="Content Page 2 AA" />
+                <UserEventArg Name="target" StringValue="contentPage_b" />
+            </RaiseUserEvent>
+        </Clicked>
+    </uxButton>
+    <uxButton Label="Call Content BB">
+        <Clicked>
+            <RaiseUserEvent EventName="routeContent">
+                <UserEventArg Name="id" StringValue="0002" />
+                <UserEventArg Name="title" StringValue="Content Page 2 BB" />
+                <UserEventArg Name="target" StringValue="contentPage_b" />
             </RaiseUserEvent>
         </Clicked>
     </uxButton>

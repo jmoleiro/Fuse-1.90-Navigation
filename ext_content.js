@@ -1,17 +1,17 @@
 var Observable = require("FuseJS/Observable");
 
-received = this.Parameter.map(module, function(param) {
-    console.log("map: "+JSON.stringify(param));
-    return param.id;
-});
+var received = Observable();
+received.value = "It's not working!";
 
 this.Parameter.onValueChanged(module, function(param) {
-    console.log("ovc: "+JSON.stringify(param));
+    if (param != undefined) {
+        console.log("ovc: "+JSON.stringify(param));
+        received.value = param.id    
+    }
 });
 
-module.export = {
-    received: this.Parameter.map(module, function(param) {
-        console.log("map: "+JSON.stringify(param));
-        return param.id;
-    })  
+module.exports = {
+    received: received
 }
+
+

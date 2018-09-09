@@ -7,11 +7,17 @@
 <Navigator Dock="Fill" DefaultPath="main">
     <Page ux:Template="main">
     <ScrollView>
-        <homepage router="router" />
+        <homepage />
     </ScrollView>
     </Page>
-    <Page ux:Template="content">
-        <content router="router" Background="#4266AB" />    
+    <!-- This call will fire the Parameter.onValueChanged correctly -->
+    <content Background="#4266AB" ux:Template="contentPage" />    
+    <Page ux:Template="contentPage_b">
+        <!-- 
+        This call will not, because the parameter is sent to the page contentPage_b and not into the <content> object 
+        To make it works, the content shold be direct child of the Navigator object
+        -->
+        <content Background="#4266AB" />    
     </Page>
 </Navigator>
 </App>
